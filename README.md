@@ -153,30 +153,30 @@ python-dotenv	Environment configuration
 
 System Architecture
 
-┌─────────────────────┐
-                    │      Candidate      │
+		                ┌─────────────────────┐
+                    │      Candidate    	│
                     └──────────┬──────────┘
                                │
                                ▼
                     ┌─────────────────────┐
-                    │   Sign Up / Login   │
+                    │     ign Up / Login 	│
                     └──────────┬──────────┘
                                │
                                ▼
                     ┌─────────────────────┐
-                    │ Interview Setup     │
-                    │ Role + Skills       │
+                    │ 	 Interview Setup  │
+                    │		 Role + Skills    │
                     └──────────┬──────────┘
                                │
                                ▼
                     ┌─────────────────────┐
                     │    AI Interviewer   │
-                    │  Question Generator  │
+                    │ 	Question Generator│
                     └──────────┬──────────┘
                                │
                                ▼
                     ┌─────────────────────┐
-                    │    5 Questions      │
+                    │    	5 Questions 	  │
                     └──────────┬──────────┘
                                │
                                ▼
@@ -186,20 +186,20 @@ System Architecture
                                │
                                ▼
                     ┌─────────────────────┐
-                    │     AI Evaluator    │
-                    │ Final Evaluation    │
+                    │    AI Evaluator 	  │
+                    │ 	Final Evaluation  │
                     └──────────┬──────────┘
                                │
                                ▼
                     ┌─────────────────────┐
-                    │ Recruiter Dashboard │
+                    │ 	  Recruiter Dashboard	 │
                     └──────────┬──────────┘
                                │
                                ▼
                     ┌─────────────────────┐
-                    │ Candidate Results   │
-                    │ Score / Strengths   │
-                    │ Gaps / Decision     │
+                    │	 Candidate Results  │
+                    │ 	Score / Strengths │
+                    │	 Gaps / Decision    │
                     └─────────────────────┘
 
 
@@ -230,12 +230,9 @@ Interview-Agent/
 │   └── admin_dashboard.html
 │
 ├── static/
-│   ├── style.css
-│   ├── script.js
-│   └── admin.js
-│
-└── data/
-    └── interviews/
+    ├── style.css
+    ├── script.js
+    └── admin.js
 
 
 ---
