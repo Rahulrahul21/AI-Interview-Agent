@@ -1,0 +1,56 @@
+{
+    "timestamp": "2026-08-16T21:23:54.464279",
+    "role": "software engineer",
+    "skills": [
+        "python",
+        "java",
+        "c",
+        "dsa",
+        "react",
+        "js"
+    ],
+    "questions": [
+        {
+            "question_number": 1,
+            "question": "Can you explain the basic differences between statically-typed languages like Java and C, and dynamically-typed languages like Python, and how these differences impact your coding approach?",
+            "answer": "Statically typed languages like Java and C require variable types to be defined and checked before execution, while Python determines types at runtime.\nThis means Python allows faster, more flexible coding, whereas Java/C provide stronger type safety and can catch many type-related errors earlier."
+        },
+        {
+            "question_number": 2,
+            "question": "Write a simple React component in JavaScript that displays a greeting message, and walk me through the process of how it would be rendered on the page.",
+            "answer": "function Greeting() {\n    return <h1>Hello, welcome to my website!</h1>;\n}"
+        },
+        {
+            "question_number": 3,
+            "question": "How would you implement a binary search algorithm in Python to find an element in a sorted list, and what are the time and space complexities of this algorithm?",
+            "answer": "def binary_search(arr, target):\n    low, high = 0, len(arr) - 1\n\n    while low <= high:\n        mid = (low + high) // 2\n\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n\n    return -1"
+        },
+        {
+            "question_number": 4,
+            "question": "Suppose you're tasked with building a web application using Java as the backend and React as the frontend, can you describe how you would design the API endpoints for user authentication and authorization?",
+            "answer": "I would use Java Spring Boot with REST APIs such as `/auth/register`, `/auth/login`, `/auth/refresh`, and `/auth/logout`, returning JWT access tokens after successful authentication.\nFor authorization, I would use Spring Security with role-based access control, where protected endpoints verify the JWT and allow access based on roles like `USER` or `ADMIN`."
+        },
+        {
+            "question_number": 5,
+            "question": "Given a scenario where you need to optimize the performance of a JavaScript function that is causing a bottleneck in your React application, what steps would you take to identify the issue and what techniques would you use to improve the function's efficiency?",
+            "answer": "I would use Chrome DevTools and React Profiler to identify the bottleneck, then analyze the function’s time complexity and unnecessary re-renders.\nI would optimize it using memoization (`useMemo`, `useCallback`), efficient algorithms/data structures, debouncing or throttling, and by avoiding unnecessary computations."
+        }
+    ],
+    "final_evaluation": {
+        "overall_score": 8.5,
+        "performance": "Strong",
+        "strengths": [
+            "Strong understanding of programming fundamentals in languages like Python, Java, and JavaScript",
+            "Good problem solving skills, as demonstrated by the implementation of the binary search algorithm"
+        ],
+        "gaps": [
+            "Limited explanation of the React component rendering process",
+            "No mention of error handling in the binary search algorithm"
+        ],
+        "recommendations": [
+            "Provide more detailed explanations of complex concepts",
+            "Practice implementing error handling in algorithms"
+        ],
+        "summary": "The candidate demonstrated a good understanding of the required skills, including programming languages and data structures, and provided practical examples of their application."
+    }
+}

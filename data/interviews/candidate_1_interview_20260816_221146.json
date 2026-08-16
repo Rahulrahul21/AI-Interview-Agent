@@ -1,0 +1,58 @@
+{
+    "candidate_id": 1,
+    "candidate_name": "Arjun Reddy",
+    "candidate_email": "arjun.reddy@example.com",
+    "timestamp": "2026-08-16T22:11:46.644706",
+    "role": "python devellper",
+    "skills": [
+        "python",
+        "java",
+        "c",
+        "dsa",
+        "react"
+    ],
+    "questions": [
+        {
+            "question_number": 1,
+            "question": "What is the difference between static and dynamic typing in programming languages, and how does Python's typing system fit into this classification?",
+            "answer": "yes"
+        },
+        {
+            "question_number": 2,
+            "question": "How would you implement a Python function to find the maximum value in a list of integers, and what data structures would you use to optimize this operation?",
+            "answer": "noo"
+        },
+        {
+            "question_number": 3,
+            "question": "Suppose you are given a dataset of student exam scores, and you need to write a Python program to find the top 5 students with the highest average score, how would you approach this problem?",
+            "answer": "really"
+        },
+        {
+            "question_number": 4,
+            "question": "How would you handle errors and exceptions in a Python application that interacts with a React frontend, and what strategies would you use to ensure robust error handling?",
+            "answer": "nope"
+        },
+        {
+            "question_number": 5,
+            "question": "Design or explain an architecture for a web scraper built using Python and React, that can extract data from a website, store it in a database, and display the scraped data on a web page, considering scalability and performance issues.",
+            "answer": "will"
+        }
+    ],
+    "final_evaluation": {
+        "overall_score": 2.0,
+        "performance": "Very Weak",
+        "strengths": [],
+        "gaps": [
+            "Lack of technical correctness in answers",
+            "Irrelevant answers to most questions",
+            "Inability to demonstrate problem-solving skills",
+            "Poor communication and clarity"
+        ],
+        "recommendations": [
+            "Do not proceed to the next round",
+            "Improve technical knowledge of Python and related skills",
+            "Practice answering technical questions with clarity and relevance"
+        ],
+        "summary": "The candidate failed to demonstrate a satisfactory understanding of the required skills and provided largely irrelevant answers across the interview."
+    }
+}

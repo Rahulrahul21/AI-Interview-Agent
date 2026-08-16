@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>InterviewAI | Sign In</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="auth-page">
+
+        <div class="auth-card">
+
+            <!-- BRAND -->
+
+            <div class="auth-brand">
+
+                <div class="brand-icon">
+                    ✦
+                </div>
+
+                <div>
+
+                    <h2>
+                        Interview<span>AI</span>
+                    </h2>
+
+                    <p>
+                        AI INTERVIEW STUDIO
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- HEADER -->
+
+            <div class="auth-header">
+
+                <p class="eyebrow">
+                    CANDIDATE PORTAL
+                </p>
+
+                <h1>
+                    Welcome back
+                </h1>
+
+                <p>
+                    Sign in to continue your AI interview.
+                </p>
+
+            </div>
+
+
+            <!-- ERROR MESSAGE -->
+
+            {% if error %}
+
+            <div
+                class="auth-error"
+                role="alert"
+            >
+
+                {{ error }}
+
+            </div>
+
+            {% endif %}
+
+
+            <!-- LOGIN FORM -->
+
+            <form
+                method="POST"
+                action="{{ url_for('login') }}"
+                autocomplete="on"
+            >
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        EMAIL ADDRESS
+                    </label>
+
+                    <input
+                        id="email"
+                        type="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        maxlength="120"
+                        required
+                        autofocus
+                    >
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="password">
+                        PASSWORD
+                    </label>
+
+                    <input
+                        id="password"
+                        type="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        maxlength="128"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    class="primary-btn"
+                >
+
+                    <span>
+                        Sign In
+                    </span>
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+            </form>
+
+
+            <!-- SIGN UP -->
+
+            <div class="auth-footer">
+
+                Don't have an account?
+
+                <a href="{{ url_for('signup') }}">
+                    Create account
+                </a>
+
+            </div>
+
+
+            <!-- SECURITY -->
+
+            <div class="auth-security">
+
+                <span>
+                    🔒
+                </span>
+
+                <span>
+                    Your account and interview data are securely protected.
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

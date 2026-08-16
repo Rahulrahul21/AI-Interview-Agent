@@ -1,0 +1,58 @@
+{
+    "timestamp": "2026-08-16T20:05:52.372314",
+    "role": "software engineer",
+    "skills": [
+        "java",
+        "c",
+        "python",
+        "dsa",
+        "html",
+        "css",
+        "react"
+    ],
+    "questions": [
+        {
+            "question_number": 1,
+            "question": "Can you explain the basics of HTML and CSS, and how they are used in web development, providing an example of a simple web page structure?",
+            "answer": "HTML is used to structure web pages with elements like headings, paragraphs, images, and buttons, while CSS is used to style their appearance and layout.\nFor example, HTML creates a heading and button, and CSS can change their colors, fonts, spacing, and positioning."
+        },
+        {
+            "question_number": 2,
+            "question": "Write a Python function to reverse a singly linked list, and describe the time and space complexity of your solution.",
+            "answer": "```python\ndef reverse_linked_list(head):\n    prev = None\n    current = head\n\n    while current:\n        next_node = current.next\n        current.next = prev\n        prev = current\n        current = next_node\n\n    return prev\n```\n\n**Time complexity:** O(n) because each node is visited once.\n**Space complexity:** O(1) because only a few pointers are used."
+        },
+        {
+            "question_number": 3,
+            "question": "How does React handle state changes, and what is the difference between a controlled and uncontrolled component in a React application?",
+            "answer": "React handles state changes using `useState` or similar state mechanisms, which trigger a re-render when the state is updated.\nA **controlled component** has its form value managed by React state, while an **uncontrolled component** manages its value through the DOM using refs."
+        },
+        {
+            "question_number": 4,
+            "question": "Suppose you are given a Java program with a performance issue due to excessive memory allocation. What steps would you take to identify and optimize the memory usage, and what Java features would you utilize?",
+            "answer": "I would use profiling tools like **VisualVM or JProfiler** to identify memory leaks and excessive allocations, then optimize object creation, collections, and caching, while using **heap dumps and garbage collection logs** to analyze memory usage.\nI would utilize **Java garbage collection, try-with-resources, appropriate data structures, object reuse, and JVM heap settings** to reduce unnecessary memory allocation."
+        },
+        {
+            "question_number": 5,
+            "question": "Design a high-level architecture for a web-based application that allows users to upload, store, and retrieve files, using Java as the backend, React as the frontend, and considering scalability and security requirements.",
+            "answer": "Use a **React frontend → Java/Spring Boot REST API → authentication/database + cloud object storage (S3)** architecture, with load balancers and caching for scalability.\nFor security, use **JWT/OAuth2, HTTPS, role-based access, file-type/size validation, malware scanning, and encrypted storage**, with backups and monitoring."
+        }
+    ],
+    "final_evaluation": {
+        "overall_score": 8.5,
+        "performance": "Strong",
+        "strengths": [
+            "Strong understanding of HTML, CSS, and React",
+            "Good problem solving skills in Python",
+            "Ability to design scalable and secure architectures"
+        ],
+        "gaps": [
+            "Limited depth in Java-specific optimizations",
+            "No mention of testing or debugging techniques"
+        ],
+        "recommendations": [
+            "Practice advanced Java optimizations and features",
+            "Familiarize yourself with testing frameworks and debugging tools"
+        ],
+        "summary": "The candidate demonstrated a good understanding of the required skills, providing clear and concise answers to most questions, with some areas for improvement in Java-specific optimizations and testing/debugging techniques."
+    }
+}

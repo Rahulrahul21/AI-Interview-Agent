@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>InterviewAI | AI Interview Studio</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <!-- ==========================================================
+         BACKGROUND
+         ========================================================== -->
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+
+    <!-- ==========================================================
+         NAVBAR
+         ========================================================== -->
+
+    <nav class="navbar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                ✦
+            </div>
+
+            <div>
+
+                <h2>
+                    Interview<span>AI</span>
+                </h2>
+
+                <p>
+                    AI INTERVIEW STUDIO
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="nav-actions">
+
+            <div class="nav-status">
+
+                <span class="status-dot"></span>
+
+                AI SYSTEM ONLINE
+
+            </div>
+
+
+            {% if candidate_name %}
+
+            <span class="candidate-name">
+
+                {{ candidate_name }}
+
+            </span>
+
+
+            <a
+                href="{{ url_for('logout') }}"
+                class="logout-btn"
+            >
+
+                Sign Out
+
+            </a>
+
+            {% endif %}
+
+        </div>
+
+    </nav>
+
+
+    <!-- ==========================================================
+         MAIN
+         ========================================================== -->
+
+    <main class="container">
+
+
+        <!-- ======================================================
+             SETUP SCREEN
+             ====================================================== -->
+
+        <section
+            id="setup-screen"
+            class="screen"
+        >
+
+            <div class="hero">
+
+                <div class="hero-badge">
+
+                    <span>
+                        ✦
+                    </span>
+
+                    AI-POWERED INTERVIEW
+
+                </div>
+
+
+                <h1>
+
+                    Your next opportunity
+
+                    <br>
+
+                    <span>
+                        starts here.
+                    </span>
+
+                </h1>
+
+
+                <p class="hero-description">
+
+                    Experience an intelligent interview
+                    powered by AI. Answer five role-specific
+                    questions and complete your assessment.
+
+                </p>
+
+            </div>
+
+
+            <!-- SETUP CARD -->
+
+            <div class="setup-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            INTERVIEW SETUP
+                        </p>
+
+                        <h2>
+                            Configure your interview
+                        </h2>
+
+                    </div>
+
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                </div>
+
+
+                <!-- ROLE -->
+
+                <div class="form-group">
+
+                    <label for="role">
+                        TARGET ROLE
+                    </label>
+
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">
+                            ◈
+                        </span>
+
+
+                        <input
+                            type="text"
+                            id="role"
+                            placeholder="e.g. Full Stack Developer"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- SKILLS -->
+
+                <div class="form-group">
+
+                    <label for="skills">
+                        CORE SKILLS
+                    </label>
+
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">
+                            ◆
+                        </span>
+
+
+                        <input
+                            type="text"
+                            id="skills"
+                            placeholder="Python, React, SQL, Java..."
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <p class="input-help">
+                        Separate skills with commas
+                    </p>
+
+                </div>
+
+
+                <!-- START -->
+
+                <button
+                    id="start-btn"
+                    class="primary-btn"
+                    type="button"
+                >
+
+                    <span>
+                        Start Interview
+                    </span>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+                <!-- FEATURES -->
+
+                <div class="setup-features">
+
+                    <div>
+
+                        <strong>
+                            05
+                        </strong>
+
+                        <span>
+                            Questions
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            AI
+                        </strong>
+
+                        <span>
+                            Evaluation
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            01
+                        </strong>
+
+                        <span>
+                            Final Review
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================================
+             INTERVIEW SCREEN
+             ====================================================== -->
+
+        <section
+            id="interview-screen"
+            class="screen hidden"
+        >
+
+            <div class="interview-top">
+
+                <div>
+
+                    <p class="eyebrow">
+                        LIVE INTERVIEW
+                    </p>
+
+
+                    <h1>
+                        Technical Assessment
+                    </h1>
+
+                </div>
+
+
+                <div class="question-counter">
+
+                    <span id="current-question">
+                        1
+                    </span>
+
+                    <span class="counter-divider">
+                        /
+                    </span>
+
+                    <span>
+                        5
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROGRESS -->
+
+            <div class="progress-container">
+
+                <div
+                    id="progress-bar"
+                    class="progress-bar"
+                ></div>
+
+            </div>
+
+
+            <!-- QUESTION -->
+
+            <div class="question-card">
+
+                <div class="question-label">
+
+                    <span class="pulse-dot"></span>
+
+                    INTERVIEWER QUESTION
+
+                </div>
+
+
+                <h2 id="question-text">
+
+                    Loading question...
+
+                </h2>
+
+            </div>
+
+
+            <!-- ANSWER -->
+
+            <div class="answer-card">
+
+                <div class="answer-header">
+
+                    <div>
+
+                        <label for="answer">
+                            YOUR RESPONSE
+                        </label>
+
+                        <p>
+                            Explain your answer clearly
+                            and provide examples where
+                            appropriate.
+                        </p>
+
+                    </div>
+
+
+                    <span id="character-count">
+                        0 characters
+                    </span>
+
+                </div>
+
+
+                <textarea
+                    id="answer"
+                    placeholder="Type your answer here..."
+                    rows="8"
+                ></textarea>
+
+
+                <div class="answer-footer">
+
+                    <span>
+                        Your answers are evaluated after
+                        all 5 questions are completed.
+                    </span>
+
+
+                    <button
+                        id="submit-btn"
+                        class="primary-btn small"
+                        type="button"
+                    >
+
+                        <span id="submit-text">
+                            Submit Answer
+                        </span>
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================================
+             SUBMISSION SCREEN
+             
+             IMPORTANT:
+             Candidate does NOT see score/evaluation.
+             ====================================================== -->
+
+        <section
+            id="result-screen"
+            class="screen hidden"
+        >
+
+            <div class="result-header">
+
+                <div class="hero-badge">
+
+                    <span>
+                        ✓
+                    </span>
+
+                    INTERVIEW SUBMITTED
+
+                </div>
+
+
+                <h1>
+
+                    Thank you for
+
+                    <span>
+                        completing the interview.
+                    </span>
+
+                </h1>
+
+
+                <p>
+
+                    Your responses have been successfully
+                    submitted for review.
+
+                </p>
+
+            </div>
+
+
+            <!-- SUBMISSION CARD -->
+
+            <div class="score-card">
+
+                <div class="submission-icon">
+
+                    ✓
+
+                </div>
+
+
+                <div class="score-content">
+
+                    <p class="eyebrow">
+                        SUBMISSION RECEIVED
+                    </p>
+
+
+                    <h2 id="performance">
+
+                        Your interview is under review
+
+                    </h2>
+
+
+                    <p id="summary">
+
+                        Your responses have been submitted
+                        successfully. The recruitment team
+                        will review your performance and
+                        contact you regarding the next round.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- INFORMATION CARDS -->
+
+            <div class="insights-grid">
+
+
+                <!-- COMPLETE -->
+
+                <div class="insight-card strengths">
+
+                    <div class="insight-title">
+
+                        <span class="insight-icon">
+                            ✓
+                        </span>
+
+
+                        <h3>
+                            Interview Complete
+                        </h3>
+
+                    </div>
+
+
+                    <ul id="strengths-list">
+
+                        <li>
+                            All 5 questions were successfully
+                            submitted.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- EVALUATION -->
+
+                <div class="insight-card gaps">
+
+                    <div class="insight-title">
+
+                        <span class="insight-icon">
+                            AI
+                        </span>
+
+
+                        <h3>
+                            Evaluation
+                        </h3>
+
+                    </div>
+
+
+                    <ul id="gaps-list">
+
+                        <li>
+                            Your responses are being
+                            evaluated securely.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- NEXT ROUND -->
+
+                <div class="insight-card recommendations">
+
+                    <div class="insight-title">
+
+                        <span class="insight-icon">
+                            →
+                        </span>
+
+
+                        <h3>
+                            Next Round
+                        </h3>
+
+                    </div>
+
+
+                    <ul id="recommendations-list">
+
+                        <li>
+                            Candidates selected for the
+                            next round will be contacted
+                            by the recruitment team.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- NEW INTERVIEW -->
+
+            <button
+                id="new-interview-btn"
+                class="secondary-btn"
+                type="button"
+            >
+
+                Start New Interview
+
+            </button>
+
+        </section>
+
+
+        <!-- ======================================================
+             ERROR MESSAGE
+             ====================================================== -->
+
+        <div
+            id="error-message"
+            class="error-message hidden"
+        ></div>
+
+
+        <!-- ======================================================
+             LOADING OVERLAY
+             ====================================================== -->
+
+        <div
+            id="loading-overlay"
+            class="loading-overlay hidden"
+        >
+
+            <div class="loader"></div>
+
+
+            <h3 id="loading-title">
+                AI is preparing your interview
+            </h3>
+
+
+            <p id="loading-description">
+                Please wait...
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- ==========================================================
+         FOOTER
+         ========================================================== -->
+
+    <footer>
+
+        <p>
+            InterviewAI © 2026
+        </p>
+
+
+        <span>
+            Intelligent assessment • Built with Python + AI
+        </span>
+
+    </footer>
+
+
+    <!-- ==========================================================
+         JAVASCRIPT
+         ========================================================== -->
+
+    <script
+        src="{{ url_for('static', filename='script.js') }}"
+    ></script>
+
+
+</body>
+
+</html>

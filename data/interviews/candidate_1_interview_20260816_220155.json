@@ -1,0 +1,58 @@
+{
+    "candidate_id": 1,
+    "candidate_name": "Arjun Reddy",
+    "candidate_email": "arjun.reddy@example.com",
+    "timestamp": "2026-08-16T22:01:55.451340",
+    "role": "Business Management",
+    "skills": [
+        "Business Strategy",
+        "Project Management",
+        "Leadership",
+        "Communication",
+        "Data Analysis"
+    ],
+    "questions": [
+        {
+            "question_number": 1,
+            "question": "What is the primary goal of business strategy in a competitive market?",
+            "answer": "The primary goal of business strategy in a competitive market is to **create and sustain a competitive advantage** by effectively using the company's resources to satisfy customers, outperform competitors, and achieve long-term business objectives."
+        },
+        {
+            "question_number": 2,
+            "question": "How would you prioritize tasks and allocate resources in a project management scenario with multiple stakeholders?",
+            "answer": "I would first identify tasks based on **business impact, urgency, dependencies, and stakeholder priorities**. Then I’d allocate resources to high-priority and critical-path tasks, communicate trade-offs with stakeholders, and regularly review progress to adjust resources as requirements change."
+        },
+        {
+            "question_number": 3,
+            "question": "Suppose you are facing a budget constraint in a project, what steps would you take to optimize costs without compromising quality?",
+            "answer": "I would first identify the project's **essential requirements and cost drivers**, then prioritize spending on areas that directly affect quality and customer value. I’d negotiate with vendors, optimize resource allocation, remove unnecessary expenses, and continuously monitor the budget while maintaining required quality standards."
+        },
+        {
+            "question_number": 4,
+            "question": "How would you handle a situation where team members have conflicting opinions on a business decision, and communication is key to resolving the issue?",
+            "answer": "noo"
+        },
+        {
+            "question_number": 5,
+            "question": "Design or explain a data-driven approach to measure the effectiveness of a business strategy, including key performance indicators and analysis techniques?",
+            "answer": "I would measure the strategy using KPIs such as **revenue growth, profit margin, customer acquisition and retention, market share, ROI, and customer satisfaction**. I would analyze trends over time, compare actual results with targets, use dashboards and segmentation, and apply techniques such as variance analysis and A/B testing to identify what is working and where improvements are needed."
+        }
+    ],
+    "final_evaluation": {
+        "overall_score": 7.0,
+        "performance": "Strong",
+        "strengths": [
+            "Demonstrated a good understanding of business strategy and project management concepts",
+            "Provided relevant answers to questions related to data analysis and business decision-making"
+        ],
+        "gaps": [
+            "Failed to provide a meaningful answer to a question related to leadership and communication",
+            "Could provide more detailed examples to support answers"
+        ],
+        "recommendations": [
+            "Proceed to the next round with a focus on assessing leadership and communication skills",
+            "Evaluate the candidate's ability to provide practical examples and apply concepts to real-world scenarios"
+        ],
+        "summary": "The candidate showed a strong foundation in business management concepts, but lacked depth in certain areas, particularly leadership and communication, and could benefit from providing more detailed examples to support their answers."
+    }
+}

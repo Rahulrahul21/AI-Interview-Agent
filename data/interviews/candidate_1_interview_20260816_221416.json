@@ -1,0 +1,53 @@
+{
+    "candidate_id": 1,
+    "candidate_name": "Arjun Reddy",
+    "candidate_email": "arjun.reddy@example.com",
+    "timestamp": "2026-08-16T22:14:16.377168",
+    "role": "Fluter Developer",
+    "skills": [
+        "Dart",
+        "Fluter"
+    ],
+    "questions": [
+        {
+            "question_number": 1,
+            "question": "What is the difference between the setState method and the Provider package in Flutter for managing state changes in a Dart application?",
+            "answer": "no"
+        },
+        {
+            "question_number": 2,
+            "question": "How would you implement a simple login functionality using Dart and Flutter, including user input validation and error handling?",
+            "answer": "iiuuu"
+        },
+        {
+            "question_number": 3,
+            "question": "Suppose you are experiencing performance issues with a Flutter app due to a complex widget tree, what steps would you take to identify and optimize the bottlenecks?",
+            "answer": "eigdkgew"
+        },
+        {
+            "question_number": 4,
+            "question": "How would you handle platform-specific code and features, such as camera or GPS access, in a Flutter app using Dart, to ensure a seamless user experience across different platforms?",
+            "answer": "dccds"
+        },
+        {
+            "question_number": 5,
+            "question": "Design or explain an architecture for a scalable and maintainable Flutter e-commerce application using Dart, including features such as navigation, data storage, and API integration.",
+            "answer": "cdcds"
+        }
+    ],
+    "final_evaluation": {
+        "overall_score": 2.0,
+        "performance": "Very Weak",
+        "strengths": [],
+        "gaps": [
+            "Lack of understanding of the required technical concepts",
+            "Inability to provide relevant answers",
+            "Poor communication and clarity"
+        ],
+        "recommendations": [
+            "Do not proceed to the next round",
+            "Consider additional training or experience in Dart and Flutter"
+        ],
+        "summary": "The candidate failed to demonstrate a basic understanding of the required skills and provided irrelevant answers across the interview."
+    }
+}
